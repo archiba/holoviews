@@ -460,7 +460,7 @@ class SelectionWidget(NdWidget):
         for i, k in enumerate(self.mock_obj.data.keys()):
             key = escape_tuple(escape_vals(k))
             key_data[key] = i
-        return json.dumps(key_data)
+        return json.dumps(key_data, ensure_ascii=False)
 
 
     def _get_data(self):
